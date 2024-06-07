@@ -56,7 +56,7 @@ public class LibrosController {
         return ResponseEntity.ok(Objects.requireNonNullElse(libros, Collections.emptyList()));
     }
 
-    @GetMapping("/libros/{libroId}")
+    @GetMapping("/{libroId}")
     @Operation(
             operationId = "Obtener un libro",
             description = "Operacion de lectura",
@@ -78,7 +78,7 @@ public class LibrosController {
         }
     }
 
-    @PostMapping("/libros")
+    @PostMapping
     @Operation(
             operationId = "Insertar un libro",
             description = "Operacion de escritura",
@@ -105,7 +105,7 @@ public class LibrosController {
         }
     }
 
-    @PutMapping("/libros/{libroId}")
+    @PutMapping("/{libroId}")
     @Operation(
             operationId = "Modificar totalmente un libro",
             description = "Operacion de escritura",
@@ -132,7 +132,7 @@ public class LibrosController {
     }
 
 
-    @DeleteMapping("/libros/{libroId}")
+    @DeleteMapping("/{libroId}")
     @Operation(
             operationId = "Eliminar un libro",
             description = "Operacion de escritura",
